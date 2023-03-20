@@ -15,7 +15,10 @@ dependencies:
   easy_localization: ^3.0.0
   syncfusion_flutter_charts: ^20.3.52
   businet_models:
-    path: C:/H/businet_models
+    git:
+      url: https://github.com/Mopilani/businet_models.git
+  # businet_models:
+  #   path: C:/H/businet_models
 
 dev_dependencies:
   flutter_test:
