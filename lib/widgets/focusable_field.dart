@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:overlay_support/overlay_support.dart';
 
 class FocusableField extends StatelessWidget {
@@ -45,7 +45,7 @@ class FocusableField extends StatelessWidget {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(5),
             ),
-            labelText: labelTextWillBeTranslated.tr(),
+            labelText: labelTextWillBeTranslated.tr,
           ),
           onSubmitted: (result) async {
             if (whatToSayifIsEmpty != null) {
@@ -175,7 +175,7 @@ class NFocusableField extends StatelessWidget {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(5),
             ),
-            labelText: labelTextWillBeTranslated.tr(),
+            labelText: labelTextWillBeTranslated.tr,
           ),
           onChanged: onChanged,
           onSubmitted: (result) async {

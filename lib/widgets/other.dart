@@ -1,16 +1,16 @@
-import 'package:easy_localization/easy_localization.dart';
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
 Widget okButton(void Function() function) {
   return MaterialButton(
     onPressed: function,
-    child: const Text(
-      'ok',
-      style: TextStyle(
+    child:  Text(
+      'ok'.tr,
+      style:const TextStyle(
         fontSize: 18,
         fontWeight: FontWeight.w600,
       ),
-    ).tr(),
+    ),
   );
 }
 

@@ -13,10 +13,11 @@ dependencies:
     sdk: flutter
   date_time_picker: ^2.1.0
   overlay_support: ^2.1.0
-  easy_localization: ^3.0.0
+  # easy_localization: ^3.0.0
   syncfusion_flutter_charts: ^20.3.52
   easy_image_viewer: ^1.2.0
   pdfx: ^2.3.0
+  get: ^4.6.5
   # businet_models:
   #   git:
   #     url: https://github.com/Mopilani/businet_models.git
@@ -25,15 +26,15 @@ dependencies:
   #     url: https://github.com/Mopilani/updater.git
   #     ref: master
 
-  # businet_models:
-  #   path: C:/H/businet_models
-  # updater:
-  #   path: C:/H/updater
-
   businet_models:
-    path: C://Users/alaa/Documents/GitHub/businet_models
+    path: C:/H/businet_models
   updater:
-    path: C://Users/alaa/Documents/GitHub/updater
+    path: C:/H/updater
+
+  # businet_models:
+  #   path: C://Users/alaa/Documents/GitHub/businet_models
+  # updater:
+  #   path: C://Users/alaa/Documents/GitHub/updater
 
 dev_dependencies:
   flutter_test:
