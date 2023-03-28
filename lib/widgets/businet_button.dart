@@ -15,6 +15,7 @@ class BusinetButton extends StatelessWidget {
     this.text,
     this.elevation,
     this.textColor,
+    this.disabledColor,
     this.padding,
     this.focusNode,
   });
@@ -30,6 +31,7 @@ class BusinetButton extends StatelessWidget {
   final Color? color;
   final double? elevation;
   final Color? textColor;
+  final Color? disabledColor;
   final EdgeInsetsGeometry? padding;
   final FocusNode? focusNode;
 
@@ -49,6 +51,7 @@ class BusinetButton extends StatelessWidget {
       textColor: textColor,
       padding: padding ?? const EdgeInsets.fromLTRB(20, 4, 20, 4),
       focusNode: focusNode,
+      disabledColor: disabledColor ?? Theme.of(context).hoverColor,
       child: child ??
           Text(
             text.toString().tr,
