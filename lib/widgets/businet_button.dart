@@ -40,14 +40,14 @@ class BusinetButton extends StatelessWidget {
     return MaterialButton(
       shape: shape ??
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(radius ?? 24),
+            borderRadius: BorderRadius.circular(radius ?? 20),
           ),
       onPressed: onPressed,
       height: height ?? 45,
       minWidth: minWidth,
       color: color,
       //  ?? Colors.white
-      // elevation: elevation ?? 0,
+      elevation: elevation,
       textColor: textColor,
       padding: padding ?? const EdgeInsets.fromLTRB(20, 4, 20, 4),
       focusNode: focusNode,

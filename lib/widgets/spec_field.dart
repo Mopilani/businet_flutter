@@ -72,7 +72,11 @@ class SpecField1<T> extends StatelessWidget {
                             for (var element in listOfT) {
                               if (titleRetriver(defaultValue as T) ==
                                   titleRetriver(element)) {
-                                fieldController.text = titleRetriver(element);
+                                try {
+                                  fieldController.text = titleRetriver(element);
+                                } catch (e) {
+                                  print(e);
+                                }
                                 return element;
                               }
                             }
@@ -92,7 +96,7 @@ class SpecField1<T> extends StatelessWidget {
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
-                          color: color ?? Colors.grey[900],
+                          color: Theme.of(context).scaffoldBackgroundColor,
                         ),
                         child: NFocusableField(
                           controller: fieldController,

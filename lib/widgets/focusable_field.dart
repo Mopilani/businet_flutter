@@ -40,6 +40,19 @@ class FocusableField extends StatelessWidget {
           controller: controller,
           enabled: enabled,
           focusNode: node,
+          onTap: () {
+            // print(controller.selection.extentOffset);
+            // print(controller.text.length);
+            if ((controller.selection.extentOffset + 1) ==
+                controller.text.length) {
+              var text = controller.text;
+              controller.value = TextEditingValue(
+                text: text,
+                selection: TextSelection.collapsed(offset: text.length),
+              );
+            }
+            // tapped = !tapped;
+          },
           decoration: InputDecoration(
             contentPadding: const EdgeInsets.fromLTRB(6, 4, 6, 4),
             border: OutlineInputBorder(
@@ -136,6 +149,7 @@ class NFocusableField extends StatelessWidget {
     this.minLines,
     this.margin,
     this.style,
+    this.expands = false,
     Key? key,
   }) : super(key: key);
 
@@ -153,9 +167,12 @@ class NFocusableField extends StatelessWidget {
   final bool enabled;
   final bool canBeNegative;
   final bool reFocusIfEmptey;
+  final bool expands;
   final int? maxLines;
   final int? minLines;
   final EdgeInsetsGeometry? margin;
+
+  // bool tapped = false;
 
   @override
   Widget build(BuildContext context) {
@@ -168,8 +185,22 @@ class NFocusableField extends StatelessWidget {
           enabled: enabled,
           focusNode: node,
           maxLines: maxLines,
-          style: style,
           minLines: minLines,
+          expands: expands,
+          style: style,
+          onTap: () {
+            // print(controller.selection.extentOffset);
+            // print(controller.text.length);
+            if ((controller.selection.extentOffset + 1) ==
+                controller.text.length) {
+              var text = controller.text;
+              controller.value = TextEditingValue(
+                text: text,
+                selection: TextSelection.collapsed(offset: text.length),
+              );
+            }
+            // tapped = !tapped;
+          },
           decoration: InputDecoration(
             contentPadding: const EdgeInsets.fromLTRB(6, 4, 6, 4),
             border: OutlineInputBorder(

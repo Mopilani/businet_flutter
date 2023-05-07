@@ -6,10 +6,12 @@ class KAppBar extends StatelessWidget {
     this.title, {
     Key? key,
     this.actions,
+    this.leading,
     this.centerTitle = true,
   }) : super(key: key);
   final String title;
   final bool centerTitle;
+  final Widget? leading;
   final List<Widget>? actions;
 
   @override
@@ -17,6 +19,7 @@ class KAppBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 4.0),
       child: AppBar(
+        leading: leading,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
         ),
